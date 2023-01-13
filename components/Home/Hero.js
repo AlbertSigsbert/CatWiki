@@ -12,7 +12,7 @@ function Hero(props) {
           alt="Hero Image"
           className="rounded-t-3xl w-full"
         />
-        <div className="absolute top-[20%] sm:top-[25%]  xl:top-[35%] left-[7%] xl:left-[15%] max-w-[136px] sm:max-w-[214px] md:max-w-xs lg:max-w-sm">
+        <div className="absolute top-[20%] sm:top-[25%]  2xl:top-[35%] left-[7%] 2xl:left-[15%] max-w-[136px] sm:max-w-[214px] md:max-w-xs lg:max-w-sm">
           <Image
             src="/img/LogoWhite.svg"
             alt="CatWiki Logo"

@@ -8,6 +8,7 @@ function Hero(props) {
     <section className="bg-[#E3E1DC] rounded-3xl">
       <div className="relative">
         <Image
+          priority
           src={HeroImagelg}
           alt="Hero Image"
           className="rounded-t-3xl w-full"
@@ -24,9 +25,9 @@ function Hero(props) {
             Get to know more about your cat breed
           </h2>
 
-          <label class="relative">
-            <span class="sr-only">Search</span>
-            <span class="absolute inset-y-0 right-0 flex items-center pr-2 sm:pr-4 md:pr-6">
+          <label className="relative">
+            <span className="sr-only">Search</span>
+            <span className="absolute inset-y-0 right-0 flex items-center pr-2 sm:pr-4 md:pr-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

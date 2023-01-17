@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+        'chocolate':'#291507'
+      },
       fontFamily: {
         montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
         mystery:["Mystery Quest", ...defaultTheme.fontFamily.sans]

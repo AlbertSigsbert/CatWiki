@@ -23,9 +23,9 @@ function Layout(props) {
           <div className="relative w-20 sm:w-28 xl:w-32">
             <Image src={CatSVG} alt="CatWiki Logo"/>
           </div>
-          <p className="inline-flex flex-wrap items-center pb-2 xl:pb-4 text-center text-xs sm:text-lg text-white">
-            <span className="text-2xl pr-2">&copy;</span> created by{" "}
-            <span className="font-bold px-2">albert</span> - devChallenge.io 2023
+          <p className="inline-flex w-full flex-wrap items-center pb-2 xl:pb-4 text-center text-xs sm:text-lg text-white">
+            <span className="md:text-2xl md:pr-2">&copy;</span> created by{" "}
+            <span className="font-bold px-1 md:px-2">albert</span> - devChallenge.io 2023
           </p>
         </div>
       </footer>

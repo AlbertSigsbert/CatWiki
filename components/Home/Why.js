@@ -17,7 +17,7 @@ function Why(props) {
           chemicals in your body which lower your stress and anxiety leves
         </p>
         <Link
-          href="/"
+          href="/why"
           className="my-4 md:my-8 font-bold flex items-center text-xs uppercase md:text-base "
         >
           Read More{" "}

@@ -2,20 +2,41 @@ import Image from "next/image";
 import StatRating from "./StatRating";
 
 function Hero(props) {
-  const stats = {
-    adaptability: 5,
-    affectionLevel: 5,
-    childFriendly: 4,
-    grooming: 1,
-    intelligence: 5,
-    healthIssues: 3,
-    socialNeeds: 5,
-    strangerFriendly: 3,
-  };
+  const stats = [
+    {
+      attribute: "adaptability",
+      rating: 5,
+    },
+    {
+      attribute: "affection Level",
+      rating: 5,
+    },
+    {
+      attribute: "child Friendly",
+      rating: 4,
+    },
+    {
+      attribute: "grooming",
+      rating: 1,
+    },
+    {
+      attribute: "health Issues",
+      rating: 3,
+    },
+    {
+      attribute: "social Needs",
+      rating: 5,
+    },
+    {
+      attribute: "stranger Friendly",
+      rating: 3,
+    },
+  ];
   return (
     <section className="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="relative w-64 h-64 xl:w-96 xl:h-96 place-self-center lg:place-self-start">
         <Image
+          priority
           src="/img/bengal.jpg"
           alt="Bengal"
           fill
@@ -25,7 +46,9 @@ function Hero(props) {
       </div>
 
       <div className="lg:col-span-2 md:place-self-center  font-montserrat">
-        <h1 className="text-2xl md:text-4xl font-semibold text-chocolate">Bengal</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold text-chocolate">
+          Bengal
+        </h1>
         <p className="max-w-xl mt-8 font-medium text-base md:text-lg">
           Bengals are a lot of fun to live with, but they&apos;re definitely not
           the cat for everyone, or for first-time cat owners. Extremely
@@ -42,38 +65,19 @@ function Hero(props) {
         <p className="font-medium text-xs md:text-base mb-8">
           <strong className="font-bold">Life Span:</strong> 12 - 15 years
         </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Adaptability:</strong>{" "}
-          <StatRating rating={stats.adaptability} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Affection Level:</strong>{" "}
-          <StatRating rating={stats.affectionLevel} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Child Friendly:</strong>{" "}
-          <StatRating rating={stats.childFriendly} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Grooming:</strong>{" "}
-          <StatRating rating={stats.grooming} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Intelligence:</strong>{" "}
-          <StatRating rating={stats.intelligence} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Health issues:</strong>{" "}
-          <StatRating rating={stats.healthIssues} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Social needs:</strong>{" "}
-          <StatRating rating={stats.socialNeeds} />
-        </p>
-        <p className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between">
-          <strong className="font-bold">Stranger friendly:</strong>{" "}
-          <StatRating rating={stats.strangerFriendly} />
-        </p>
+
+        {stats &&
+          stats.map((stat) => (
+            <div
+              key={stat.attribute}
+              className="font-medium text-xs md:text-base mb-8 max-w-xl flex flex-col sm:flex-row justify-between"
+            >
+              <strong className="font-bold capitalize">
+                {stat.attribute}:
+              </strong>{" "}
+              <StatRating rating={stat.rating} />
+            </div>
+          ))}
       </div>
     </section>
   );

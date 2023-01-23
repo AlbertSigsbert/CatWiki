@@ -12,7 +12,7 @@ function Discover(props) {
         <h2 className="max-w-[185px] md:max-w-xs lg:max-w-lg text-lg md:text-3xl lg:text-5xl font-bold">
           66+ Breeds For you to discover
         </h2>
-        <Link href="/" className="flex items-center text-xs md:text-base uppercase">
+        <Link href="/most-searched" className="flex items-center text-xs md:text-base uppercase">
           See More{" "}
           <span className="inline-block ml-2">
             <svg

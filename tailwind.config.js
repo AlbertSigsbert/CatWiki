@@ -14,8 +14,15 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        mystery:["Mystery Quest", ...defaultTheme.fontFamily.sans]
+        mystery:["Mystery Quest", ...defaultTheme.fontFamily.sans],
+        lora:["Lora", ...defaultTheme.fontFamily.sans],
+        hind:["Hind Madurai", ...defaultTheme.fontFamily.sans],
+        tillana:["Tillana"],
+
       },
+      gridTemplateColumns: {
+        'fluid': 'repeat(auto-fill, minmax(18rem, 1fr))',
+      }
     },
   },
   plugins: [],

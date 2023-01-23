@@ -5,7 +5,7 @@ function Grid(props) {
   return (
     <div className="pb-12 md:pb-24 grid place-items-center gap-4 max-[400px]:grid-cols-1 grid-cols-2  xl:grid-cols-4">
       <div>
-        <Link href="/">
+        <Link href="/details">
           <div className="relative w-[135px] h-[135px] sm:w-48 sm:h-48  md:w-56 md:h-56  rounded-3xl overflow-hidden">
             <Image
               src="/img/bengal.jpg"
@@ -16,7 +16,7 @@ function Grid(props) {
           </div>
         </Link>
         <Link
-          href="/"
+          href="/details"
           className="text-xs mt-4 md:text-lg font-montserrat font-semibold text-chocolate capitalize"
         >
           Bengal
@@ -24,7 +24,7 @@ function Grid(props) {
       </div>
 
       <div>
-        <Link href="/">
+        <Link href="/details">
           <div className="relative w-[135px] h-[135px]  sm:w-48 sm:h-48 md:w-56 md:h-56  rounded-3xl overflow-hidden">
             <Image
               src="/img/savannah.jpeg"
@@ -35,7 +35,7 @@ function Grid(props) {
           </div>
         </Link>
         <Link
-          href="/"
+          href="/details"
           className="text-xs mt-4 md:text-lg font-montserrat font-semibold text-chocolate capitalize"
         >
           Savannah
@@ -43,7 +43,7 @@ function Grid(props) {
       </div>
 
       <div>
-        <Link href="/">
+        <Link href="/details">
           <div className="relative w-[135px] h-[135px]  sm:w-48 sm:h-48 md:w-56 md:h-56  rounded-3xl overflow-hidden">
             <Image
               src="/img/norwegian-forest.jpg"
@@ -55,7 +55,7 @@ function Grid(props) {
         </Link>
 
         <Link
-          href="/"
+          href="/details"
           className="text-xs mt-4 md:text-lg font-montserrat font-semibold text-chocolate capitalize"
         >
           Norwegian Forest Cat
@@ -63,7 +63,7 @@ function Grid(props) {
       </div>
 
       <div>
-        <Link href="/">
+        <Link href="/details">
           <div className="relative w-[135px] h-[135px]  sm:w-48 sm:h-48 md:w-56 md:h-56  rounded-3xl overflow-hidden">
             <Image
               src="/img/Selkirk-Rex.jpg"
@@ -74,7 +74,7 @@ function Grid(props) {
           </div>
         </Link>
         <Link
-          href="/"
+          href="/details"
           className="text-xs mt-4 md:text-lg font-montserrat font-semibold text-chocolate capitalize"
         >
           Selkirk Rex

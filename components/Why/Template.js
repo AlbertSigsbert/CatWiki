@@ -1,12 +1,11 @@
+import Article from "./Article";
 import Hero from "./Hero";
-import Photos from "./Photos";
-
 
 function Template(props) {
   return (
     <>
       <Hero />
-      <Photos/>
+      <Article />
     </>
   );
 }

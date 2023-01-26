@@ -1,7 +1,19 @@
 import Image from "next/image";
 import HeroImagelg from "../../public/img/HeroImagelg.png";
-import HeroImagemd from "../../public/img/HeroImagemd.png";
-import HeroImagesm from "../../public/img/HeroImagesm.png";
+import { motion } from "framer-motion";
+
+
+const swipeRight = {
+  initial:{
+    opacity:0,
+    x:'-100vw'
+  },
+  animate:{
+    opacity:1,
+    x:0,
+    transition:{ delay: 0.5, duration: 1 }
+  }
+};
 
 function Hero(props) {
   return (
@@ -13,7 +25,12 @@ function Hero(props) {
           alt="Hero Image"
           className="rounded-t-3xl w-full"
         />
-        <div className="absolute top-[20%] sm:top-[25%]  2xl:top-[35%] left-[7%] 2xl:left-[15%] max-w-[136px] sm:max-w-[214px] md:max-w-xs lg:max-w-sm">
+        <motion.div
+          variants={swipeRight}
+          initial="initial"
+          animate="animate"
+          className="absolute top-[20%] sm:top-[25%]  2xl:top-[35%] left-[7%] 2xl:left-[15%] max-w-[136px] sm:max-w-[214px] md:max-w-xs lg:max-w-sm"
+        >
           <Image
             src="/img/LogoWhite.svg"
             alt="CatWiki Logo"
@@ -42,7 +59,6 @@ function Hero(props) {
                   d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
                 />
               </svg>
-              
             </span>
             <input
               type="search"
@@ -50,7 +66,7 @@ function Hero(props) {
               placeholder="Enter your breed"
             />
           </label>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

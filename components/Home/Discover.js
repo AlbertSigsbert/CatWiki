@@ -12,8 +12,13 @@ function Discover(props) {
         <h2 className="max-w-[185px] md:max-w-xs lg:max-w-lg text-lg md:text-3xl lg:text-5xl font-bold">
           66+ Breeds For you to discover
         </h2>
-        <Link href="/most-searched" className="flex items-center text-xs md:text-base uppercase">
-          See More{" "}
+        <Link
+          href="/most-searched"
+          className="flex items-center text-xs md:text-base uppercase"
+        >
+          <span>
+            See More
+          </span>
           <span className="inline-block ml-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +39,7 @@ function Discover(props) {
       </div>
 
       {/* Cat Grid */}
-      <Grid/>
+      <Grid />
     </section>
   );
 }

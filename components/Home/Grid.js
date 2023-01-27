@@ -3,24 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, useAnimationControls } from "framer-motion";
 
-const cats = [
-  {
-    name: "Bengal",
-    src: "/img/bengal.jpg",
-  },
-  {
-    name: "Savannah",
-    src: "/img/savannah.jpeg",
-  },
-  {
-    name: "Norwegian Forest Cat",
-    src: "/img/norwegian-forest.jpg",
-  },
-  {
-    name: "Selkirk Rex",
-    src: "/img/Selkirk-Rex.jpg",
-  },
-];
+
 
 const parentVariants = {
   hidden: { opacity: 0 },
@@ -32,7 +15,7 @@ const imageVariants = {
   show: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
 
-function Grid() {
+function Grid({cats}) {
   const parentRef = useRef(null);
   const childRef = useRef(null);
 
@@ -62,10 +45,10 @@ function Grid() {
       {cats &&
         cats.map((cat) => (
           <motion.div ref={childRef} variants={imageVariants} key={cat.name}>
-            <Link href="/details">
+            <Link href={`/breed/${cat.id}`}>
               <div className="relative w-[135px] h-[135px] sm:w-48 sm:h-48  md:w-56 md:h-56 rounded-3xl overflow-hidden">
                 <Image
-                  src={cat.src}
+                  src={cat.image.url}
                   alt={cat.name}
                   fill
                   className="object-cover rounded-3xl hover:brightness-50 transition duration-300 ease-in"
@@ -73,7 +56,7 @@ function Grid() {
               </div>
             </Link>
             <Link
-              href="/details"
+              href={`/breed/${cat.id}`}
               className="text-xs mt-4 md:text-lg font-montserrat font-semibold text-chocolate capitalize"
             >
               {cat.name}

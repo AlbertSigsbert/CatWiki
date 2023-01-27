@@ -1,35 +1,38 @@
 import Image from "next/image";
 import StatRating from "./StatRating";
 
-function Hero(props) {
+function Hero({cat, photos}) {
+  const photo = photos[0];
+
+
   const stats = [
     {
       attribute: "adaptability",
-      rating: 5,
+      rating: `${cat.adaptability}`
     },
     {
       attribute: "affection Level",
-      rating: 5,
+      rating: `${cat.affection_level}`
     },
     {
       attribute: "child Friendly",
-      rating: 4,
+      rating: `${cat.child_friendly}`
     },
     {
       attribute: "grooming",
-      rating: 1,
+      rating: `${cat.grooming}`
     },
     {
       attribute: "health Issues",
-      rating: 3,
+      rating: `${cat.health_issues}`
     },
     {
       attribute: "social Needs",
-      rating: 5,
+      rating: `${cat.social_needs}`
     },
     {
       attribute: "stranger Friendly",
-      rating: 3,
+      rating: `${cat.stranger_friendly}`
     },
   ];
   return (
@@ -37,8 +40,8 @@ function Hero(props) {
       <div className="relative w-64 h-64 xl:w-96 xl:h-96 place-self-center lg:place-self-start">
         <Image
           priority
-          src="/img/bengal.jpg"
-          alt="Bengal"
+          src={photo.url}
+          alt={cat.name}
           fill
           className="object-cover rounded-3xl z-10"
         />
@@ -47,23 +50,19 @@ function Hero(props) {
 
       <div className="lg:col-span-2 md:place-self-center  font-montserrat">
         <h1 className="text-2xl md:text-4xl font-semibold text-chocolate">
-          Bengal
+          {cat.name}
         </h1>
         <p className="max-w-xl mt-8 font-medium text-base md:text-lg">
-          Bengals are a lot of fun to live with, but they&apos;re definitely not
-          the cat for everyone, or for first-time cat owners. Extremely
-          intelligent, curious and active, they demand a lot of interaction and
-          woe betide the owner who doesn&apos;t provide it.
+         {cat.description}
         </p>
         <p className="font-medium text-xs md:text-base my-8">
-          <strong className="font-bold">Temperament:</strong> Alert, Agile,
-          Energetic, Demanding, Intelligent
+          <strong className="font-bold">Temperament:</strong> {cat.temperament}
         </p>
         <p className="font-medium text-xs md:text-base mb-8">
-          <strong className="font-bold">Origin:</strong> United States
+          <strong className="font-bold">Origin:</strong> {cat.origin}
         </p>
         <p className="font-medium text-xs md:text-base mb-8">
-          <strong className="font-bold">Life Span:</strong> 12 - 15 years
+          <strong className="font-bold">Life Span:</strong> {cat.life_span} years
         </p>
 
         {stats &&

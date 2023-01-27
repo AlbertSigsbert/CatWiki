@@ -2,11 +2,11 @@ import Discover from "./Discover";
 import Hero from "./Hero";
 import Why from "./Why";
 
-function Template(props) {
+function Template({data}) {
     return (
        <>
          <Hero/>
-         <Discover/>
+         <Discover cats={data}/>
          <Why/>
         
        </>

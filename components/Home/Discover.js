@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Grid from "./Grid";
 
-function Discover(props) {
+function Discover({cats}) {
   return (
     <section className="bg-[hsl(43,11%,88%)] max-[400px]:grid max-[400px]:place-items-center rounded-b-3xl px-8 md:px-16">
       <h1 className="pt-8 font-montserrat text-chocolate text-xs md:text-lg">
@@ -39,7 +39,7 @@ function Discover(props) {
       </div>
 
       {/* Cat Grid */}
-      <Grid />
+      <Grid cats={cats} />
     </section>
   );
 }

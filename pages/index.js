@@ -7,15 +7,20 @@ export async function getServerSideProps() {
   //Get most searched breed
   const res = await fetch(`${apiUrl}/breeds?limit=4`, { headers: { "x-api-key": apiKey } });
 
+  const breedsRes = await fetch(`${apiUrl}/breeds`, { headers: { "x-api-key": apiKey } });
+
   const data = await res.json();
 
-  return { props: { data } };
+  const breeds = await breedsRes.json();
+
+  
+  return { props: { data, breeds } };
 }
 
-export default function Home({ data }) {
+export default function Home({ data, breeds }) {
   return (
     <>
-      <Template data={data} />
+      <Template data={data} breeds={breeds} />
     </>
   );
 }

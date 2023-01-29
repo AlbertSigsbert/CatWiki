@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Grid from "./Grid";
+import { RightArrowIcon } from "../Icons";
 
 function Discover({cats}) {
   return (
@@ -20,20 +21,7 @@ function Discover({cats}) {
             See More
           </span>
           <span className="inline-block ml-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
+            <RightArrowIcon/>
           </span>
         </Link>
       </div>

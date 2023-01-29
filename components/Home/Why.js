@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { RightArrowIcon } from "../Icons";
 import Cat1 from "../../public/img/image 1.png";
 import Cat2 from "../../public/img/image 2.png";
 import Cat3 from "../../public/img/image 3.png";
@@ -43,20 +44,7 @@ function Why(props) {
         >
           Read More{" "}
           <span className="inline-block ml-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
+            <RightArrowIcon/>
           </span>
         </Link>
       </motion.div>

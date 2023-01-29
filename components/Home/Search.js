@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { CloseIcon, SearchIcon, SearchIconMobile } from "../Icons";
 
 function Search({ breeds }) {
   const [query, setQuery] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Prevent scrolling when the modal isOpen
   useEffect(() => {
@@ -27,58 +28,21 @@ function Search({ breeds }) {
 
   const hasResults = results && results.length > 0;
 
-  const searchIcon = () => {
-    return (
-      <span className="absolute inset-y-0 right-0 flex items-center pr-2 sm:pr-4 md:pr-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-6 md:h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-          />
-        </svg>
-      </span>
-    );
-  };
-  const searchIconMobile = () => {
-    return (
-      <span className="absolute inset-y-0 right-0 flex items-center pr-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-          />
-        </svg>
-      </span>
-    );
-  };
+  
+
 
   return (
     <>
       <form>
         <label className="relative">
           <span className="sr-only">Search</span>
-          {searchIcon()}
+           <SearchIcon/>
           <input
             type="text"
             onChange={handleChange}
             value={query}
             onFocus={()=> setIsOpen(true)}
+            onBlur={() => {setQuery(''); setIsOpen(false); }}
             className="p-0.5 sm:p-2 md:p-3 lg:p-4 pl-2 sm:pl-4 md:pl-8 w-full flex items-center placeholder:text-xs md:placeholder:text-lg  rounded-[59px] font-montserrat placeholder:text-[#291507] truncate"
             placeholder="Enter your breed"
           />
@@ -96,14 +60,14 @@ function Search({ breeds }) {
                 className="px-3 py-1 bg-gray-200 rounded-lg"
                 onClick={() => {setQuery(''); setIsOpen(false); }}
               >
-                X
+                <CloseIcon/>
               </button>
             </div>
             
             {/* Search Input - mobile only */}
             <label className="sm:hidden relative">
               <span className="sr-only">Search</span>
-              {searchIconMobile()}
+               <SearchIconMobile/>
               <input
                 type="text"
                 onChange={handleChange}

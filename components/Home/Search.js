@@ -29,8 +29,6 @@ function Search({ breeds }) {
   const hasResults = results && results.length > 0;
 
   
-
-
   return (
     <>
       <form>

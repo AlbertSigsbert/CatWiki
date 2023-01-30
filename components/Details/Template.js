@@ -3,11 +3,12 @@ import Hero from "./Hero";
 import Modal from "./Modal";
 import Photos from "./Photos";
 
-function Template({ data, photos }) {
+function Template({ breed, photos }) {
+  
   const [selectedImg, setSelectedImg] = useState(null);
   return (
     <>
-      <Hero cat={data} photos={photos} />
+      <Hero cat={breed} photos={photos} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}

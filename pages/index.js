@@ -1,6 +1,6 @@
 import Template from "../components/Home/Template";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const apiUrl = process.env.API_URL;
   const apiKey = process.env.API_KEY;
 
@@ -14,7 +14,7 @@ export async function getServerSideProps() {
   const breeds = await breedsRes.json();
 
   
-  return { props: { data, breeds } };
+  return { props: { data, breeds }, revalidate: 300};
 }
 
 export default function Home({ data, breeds }) {

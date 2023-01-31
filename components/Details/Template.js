@@ -5,9 +5,6 @@ import Photos from "./Photos";
 
 function Template({ breed, photos }) {
 
-  console.log(breed);
-  console.log(photos);
-  
   const [selectedImg, setSelectedImg] = useState(null);
   return (
     <>

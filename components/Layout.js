@@ -16,18 +16,16 @@ function Layout(props) {
         <title>CatWiki</title>
       </Head>
       <Navbar />
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.main
-          key={props.route}
+      <>
+        <motion.main  
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          // exit={{ opacity: 0, y:-15 }}
-          transition={{ delay: 0.5, ease:"easeOut" }}
+          transition={{ delay: 0.5, duration:0.5, ease:"easeOut" }}
           className="mx-[6%] min-h-screen"
         >
           {props.children}
         </motion.main>
-      </AnimatePresence>
+      </>
 
       <footer className="bg-black mx-[6%] rounded-t-[42px] pt-6 px-4 lg:px-8">
         <div className="flex flex-col space-y-4 md:space-y-0 justify-between md:flex-row font-montserrat font-normal">

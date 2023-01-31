@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 import { CloseIcon, SearchIcon, SearchIconMobile } from "../Icons";
+import { usePopularContext } from "../../hooks/usePopularContext";
 
 function Search({ breeds }) {
+  const router = useRouter()
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const { dispatch } = usePopularContext();
 
   // Prevent scrolling when the modal isOpen
   useEffect(() => {
@@ -14,6 +18,33 @@ function Search({ breeds }) {
   // Handle Change
   const handleChange = (e) => {
     setQuery(e.currentTarget.value);
+  };
+
+  //handle onBlur (outFocus)
+  const handleBlur = (e) => {
+    if (!e.relatedTarget || !e.relatedTarget.classList.contains("dropList")) {
+      // console.log('You clicked not on an element', e.relatedTarget);
+      setQuery("");
+      setIsOpen(false);
+    }
+
+  }
+
+  //Handle Click
+  const handleClick = (e, catId) => {
+    e.preventDefault();
+
+    setIsOpen(false);
+    
+    console.log('Clicked', catId);
+
+    //dispatch an action
+    dispatch({ type: "INCREMENT_VOTE", payload:catId });
+
+    //Redirect
+    const href = `/breed/${catId}`;
+    router.push(href);
+    
   };
 
   // Filtering for search results
@@ -28,19 +59,18 @@ function Search({ breeds }) {
 
   const hasResults = results && results.length > 0;
 
-  
   return (
     <>
       <form>
         <label className="relative">
           <span className="sr-only">Search</span>
-           <SearchIcon/>
+          <SearchIcon />
           <input
             type="text"
             onChange={handleChange}
             value={query}
-            onFocus={()=> setIsOpen(true)}
-            onBlur={() => {setQuery(''); setIsOpen(false); }}
+            onFocus={() => setIsOpen(true)}
+            onBlur = {handleBlur}
             className="p-0.5 sm:p-2 md:p-3 lg:p-4 pl-2 sm:pl-4 md:pl-8 w-full flex items-center placeholder:text-xs md:placeholder:text-lg  rounded-[59px] font-montserrat placeholder:text-[#291507] truncate"
             placeholder="Enter your breed"
           />
@@ -56,16 +86,19 @@ function Search({ breeds }) {
             <div className="sm:hidden mb-4 flex w-full justify-end">
               <button
                 className="px-3 py-1 bg-gray-200 rounded-lg"
-                onClick={() => {setQuery(''); setIsOpen(false); }}
+                onClick={() => {
+                  setQuery("");
+                  setIsOpen(false);
+                }}
               >
-                <CloseIcon/>
+                <CloseIcon />
               </button>
             </div>
-            
+
             {/* Search Input - mobile only */}
             <label className="sm:hidden relative">
               <span className="sr-only">Search</span>
-               <SearchIconMobile/>
+              <SearchIconMobile />
               <input
                 type="text"
                 onChange={handleChange}
@@ -82,8 +115,10 @@ function Search({ breeds }) {
               {results.map((cat) => (
                 <li key={cat.id}>
                   <Link
-                    href={`/breed/${cat.id}`}
-                    className="block p-4 hover:bg-gray-100"
+                     href=""
+                    // href={`/breed/${cat.id}`}
+                    onClick={(e) => handleClick(e, cat.id)}
+                    className="dropList block p-4 hover:bg-gray-100"
                   >
                     {cat.name}
                   </Link>

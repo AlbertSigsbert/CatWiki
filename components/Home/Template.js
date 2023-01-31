@@ -1,13 +1,13 @@
-import Discover from "./Discover";
 import Hero from "./Hero";
+import Discover from "./Discover";
 import Why from "./Why";
 
-function Template({data, breeds}) {
+function Template({breeds}) {
 
     return (
        <>
          <Hero breeds={breeds}/>
-         <Discover cats={data}/>
+         <Discover />
          <Why/>
         
        </>

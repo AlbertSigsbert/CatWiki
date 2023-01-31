@@ -2,7 +2,7 @@ import Link from "next/link";
 import Grid from "./Grid";
 import { RightArrowIcon } from "../Icons";
 
-function Discover({cats}) {
+function Discover() {
   return (
     <section className="bg-[hsl(43,11%,88%)] max-[400px]:grid max-[400px]:place-items-center rounded-b-3xl px-8 md:px-16">
       <h1 className="pt-8 font-montserrat text-chocolate text-xs md:text-lg">
@@ -27,7 +27,7 @@ function Discover({cats}) {
       </div>
 
       {/* Cat Grid */}
-      <Grid cats={cats} />
+      <Grid />
     </section>
   );
 }

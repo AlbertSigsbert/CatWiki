@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 
   const params = ids.map(id => ({params: {id:id}}));
 
-  return { paths: params, fallback:false };
+  return { paths: params, fallback:'blocking' };
 }
 
 function Breed({ breed, photos }) {

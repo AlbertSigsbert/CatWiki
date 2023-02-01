@@ -18,7 +18,7 @@ export async function getStaticProps(context) {
   const breeds = await getCatBreeds();
   const breed = breeds.find((breed) => breed.id === id);
 
-  return { props: { breed}, revalidate: 300 };
+  return { props: { breed} };
 }
 
 //getStaticPaths

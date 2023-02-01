@@ -1,9 +1,7 @@
 import Image from "next/image";
 import StatRating from "./StatRating";
 
-function Hero({ cat, photos }) {
-  const photo = photos[0];
-
+function Hero({ cat }) {
   const stats = [
     {
       attribute: "adaptability",
@@ -38,11 +36,11 @@ function Hero({ cat, photos }) {
     <>
       {cat && (
         <section className="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {photo && (
+          {cat.image && (
             <div className="relative w-64 h-64 xl:w-96 xl:h-96 place-self-center lg:place-self-start">
               <Image
                 priority
-                src={photo.url}
+                src={cat.image.url}
                 alt={cat.name}
                 fill
                 className="object-cover rounded-3xl z-10"

@@ -39,14 +39,16 @@ function Photos({ setSelectedImg }) {
         Other Photos
       </h1>
 
-      <div className="flex w-full justify-center">
-        <button
-          onClick={fetchPhotos}
-          className="px-5 py-2.5 text-center mr-2 mb-8 text-white font-medium rounded-lg text-sm bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br shadow-lg shadow-red-500/50"
-        >
-          Load Other Photos
-        </button>
-      </div>
+      {!photos && (
+        <div className="flex w-full justify-center">
+          <button
+            onClick={fetchPhotos}
+            className="px-5 py-2.5 text-center mr-2 mb-8 text-white font-medium rounded-lg text-sm bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br shadow-lg shadow-red-500/50"
+          >
+            Load More Photos
+          </button>
+        </div>
+      )}
 
       {isLoading && <PhotoSkeleton />}
 

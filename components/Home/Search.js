@@ -36,7 +36,7 @@ function Search({ breeds }) {
 
     setIsOpen(false);
     
-    console.log('Clicked', catId);
+    // console.log('Clicked', catId);
 
     //dispatch an action
     dispatch({ type: "INCREMENT_VOTE", payload:catId });

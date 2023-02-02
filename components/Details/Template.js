@@ -17,7 +17,7 @@ function Template({ breed }) {
         <meta property="og:type" content="website"/>
         <meta property="og:url" content={`https://albertsigsbert.netlify.app/breed/${breed.id}`}/>
         <meta property="og:description" content={breed.description}/>
-        <meta property="og:image" content={breed.image.url}/>
+        <meta property="og:image" content="https://cat-wiki-phi.vercel.app/home.png"/>
         
 
           {/* Twitter Meta */}
@@ -25,7 +25,7 @@ function Template({ breed }) {
         <meta name="twitter:site" content="@albert_sigsbert"/>
         <meta name="twitter:title" content={`Catwiki| ${breed.name}`}/>
         <meta name="twitter:description" content={breed.description}/>
-        <meta name="twitter:image" content={breed.image.url}/>
+        <meta name="twitter:image" content="https://cat-wiki-phi.vercel.app/home.png"/>
     
       </Head>
 

@@ -10,36 +10,21 @@ function Template(props) {
     <>
       <Head>
         <title>CatWiki | Most Searched</title>
-        <meta
-          name="description"
-          content="This webpage provides a list of top 10 most searched cat breeds in this website"
-        />
+        <meta name="description" content="This webpage provides a list of top 10 most searched cat breeds in this website"/>
 
         {/* OpenGraph Metatags */}
-        <meta property="og:title" content="CatWiki | Most Searched" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://cat-wiki-phi.vercel.app/most-searched" />
-        <meta
-          property="og:description"
-          content="This webpage provides a list of top 10 most searched cat breeds in this website"
-        />
-        <meta
-          property="og:image"
-          content="https://cat-wiki-phi.vercel.app/img/most-searched.png"
-        />
+        <meta property="og:title" content="CatWiki | Most Searched"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://cat-wiki-phi.vercel.app/most-searched"/>
+        <meta property="og:description"content="This webpage provides a list of top 10 most searched cat breeds in this website"/>
+        <meta property="og:image" content="https://cat-wiki-phi.vercel.app/img/most-searched.png"/>
 
         {/* Twitter Meta */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@albert_sigsbert" />
-        <meta name="twitter:title" content="CatWiki | Most Searched" />
-        <meta
-          name="twitter:description"
-          content="This webpage provides a list of top 10 most searched cat breeds in this website"
-        />
-        <meta
-          name="twitter:image"
-          content="https://cat-wiki-phi.vercel.app/img/most-searched.png"
-        />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@albert_sigsbert"/>
+        <meta name="twitter:title" content="CatWiki | Most Searched"/>
+        <meta name="twitter:description" content="This webpage provides a list of top 10 most searched cat breeds in this website"/>
+        <meta name="twitter:image" content="https://cat-wiki-phi.vercel.app/img/most-searched.png"/>
       </Head>
 
 

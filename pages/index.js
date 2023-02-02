@@ -12,15 +12,15 @@ export async function getStaticProps() {
 
   const breeds = await breedsRes.json();
 
-  const modifiedBreeds = breeds.map(item => ({
+  const modifiedBreeds = breeds.map((item) => ({
     id: item.id,
     name: item.name,
     description: item.description,
-    image:JSON.parse(JSON.stringify( {...item.image})),
-    vote:0
-    }));
+    image: JSON.parse(JSON.stringify({ ...item.image })),
+    vote: 0,
+  }));
 
-  return { props: {  breeds, modifiedBreeds }, revalidate: 300 };
+  return { props: { breeds, modifiedBreeds }, revalidate: 300 };
 }
 
 export default function Home({ data, breeds, modifiedBreeds }) {
@@ -32,12 +32,7 @@ export default function Home({ data, breeds, modifiedBreeds }) {
         payload: modifiedBreeds,
       });
     }
-   
   }, [dispatch, modifiedBreeds]);
 
-  return (
-    <>
-      <Template data={data} breeds={breeds} />
-    </>
-  );
+  return <Template data={data} breeds={breeds} />;
 }

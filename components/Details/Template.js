@@ -10,22 +10,22 @@ function Template({ breed }) {
     <>
       <Head>
         <title>Catwiki | {breed.name}</title>
-        <meta name="description" content={breed.description} />
+        <meta name="description" content={breed.description}/>
 
           {/* OpenGraph Metatags */}
-        <meta property="og:title" content={`Catwiki| ${breed.name}`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://albertsigsbert.netlify.app/breed/${breed.id}`} />
-        <meta property="og:description" content={breed.description} />
+        <meta property="og:title" content={`Catwiki| ${breed.name}`}/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content={`https://albertsigsbert.netlify.app/breed/${breed.id}`}/>
+        <meta property="og:description" content={breed.description}/>
         <meta property="og:image" content={breed.image.url}/>
         
 
           {/* Twitter Meta */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@albert_sigsbert" />
-        <meta name="twitter:title" content={`Catwiki| ${breed.name}`} />
-        <meta name="twitter:description" content={breed.description} />
-        <meta name="twitter:image" content={breed.image.url} />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@albert_sigsbert"/>
+        <meta name="twitter:title" content={`Catwiki| ${breed.name}`}/>
+        <meta name="twitter:description" content={breed.description}/>
+        <meta name="twitter:image" content={breed.image.url}/>
     
       </Head>
 

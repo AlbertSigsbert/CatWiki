@@ -35,7 +35,7 @@ For styling, I reached out to tailwind CSS due to its great compatibility with N
 Another feature that was a little bit tricky to implement was the most searched cat breeds because it's not directly supported by the given API so I had to get 
 creative to implement it manually and I did achieve it using ContextAPI and LocalStorage
 
-Finally, I have to say it was so fun building this project since I am a cat lover, it's always great to be able to use code to build the things you love >:-)
+Finally, I it was so fun building this project since I am a cat lover, it's always great to be able to use code to build the things you love :-)
 
 
 ### Built With
@@ -75,8 +75,12 @@ $ git clone https://github.com/your-user-name/your-project-name
 # Install dependencies
 $ npm install
 
+# SignUp at the catsAPI
+
+# Add your API KEY to your .env file
+
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Acknowledgements

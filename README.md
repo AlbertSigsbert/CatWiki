@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/gu1fU08DlObSiwvpSMTk">
       Solution
     </a>
     <span> | </span>
@@ -28,12 +28,14 @@
 
 ![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+To create this project I used Nextjs due to many reasons but mainly because the project required a lot of server-side code so instead of using different frameworks for client and server code I opted for Nextjs which provides you with both.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+For styling, I reached out to tailwind CSS due to its great compatibility with NextJS and also it's so natural and easy to use at least for me
+
+Another feature that was a little bit tricky to implement was the most searched cat breeds because it's not directly supported by the given API so I had to get creative to implement it manually and I did achieve it using ContextAPI and LocalStorage
+
+Finally, I have to admit it was so fun building this project especially since I am a cat lover it's always great to be able to use code to build the things you love :-)
+
 
 ### Built With
 

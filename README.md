@@ -26,7 +26,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![cat-wiki(screenshot)](https://user-images.githubusercontent.com/66664314/216924870-95c1b143-ac42-41ba-8311-3cb9f8fd5d6d.png)
 
 To create this project I used Nextjs due to many reasons but mainly because the project required a lot of server-side code so instead of using different frameworks for client and server code I opted for Nextjs which provides you with both.
 

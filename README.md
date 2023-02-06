@@ -28,10 +28,7 @@
 
 ![cat-wiki(screenshot)](https://user-images.githubusercontent.com/66664314/216924870-95c1b143-ac42-41ba-8311-3cb9f8fd5d6d.png)
 
- To create this project I used Nextjs due to many reasons but mainly because the challenge requirements stated that 
-> The client-side should not use the API directly. Everything should be handled on the server-side. 
-
- so instead of using different frameworks for client and server code I opted for Nextjs which provides you with both.
+To create this project I used Nextjs due to many reasons but mainly because the challenge requirements stated that **the client-side should not use the API directly. Everything should be handled on the server-side.**So instead of using different frameworks for client and server code I opted for Nextjs which provides you with both.
 
 For styling, I reached out to tailwind CSS due to its great compatibility with NextJS and also it's so natural and easy to use at least for me
 

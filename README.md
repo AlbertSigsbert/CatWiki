@@ -28,13 +28,15 @@
 
 ![cat-wiki(screenshot)](https://user-images.githubusercontent.com/66664314/216924870-95c1b143-ac42-41ba-8311-3cb9f8fd5d6d.png)
 
-To create this project I used Nextjs due to many reasons but mainly because the project required a lot of server-side code so instead of using different frameworks for client and server code I opted for Nextjs which provides you with both.
+> To create this project I used Nextjs due to many reasons but mainly because the project required a lot of server-side code so instead of using different frameworks 
+> for client and server code I opted for Nextjs which provides you with both.
 
-For styling, I reached out to tailwind CSS due to its great compatibility with NextJS and also it's so natural and easy to use at least for me
+> For styling, I reached out to tailwind CSS due to its great compatibility with NextJS and also it's so natural and easy to use at least for me
 
-Another feature that was a little bit tricky to implement was the most searched cat breeds because it's not directly supported by the given API so I had to get creative to implement it manually and I did achieve it using ContextAPI and LocalStorage
+> Another feature that was a little bit tricky to implement was the most searched cat breeds because it's not directly supported by the given API so I had to get 
+> creative to implement it manually and I did achieve it using ContextAPI and LocalStorage
 
-Finally, I have to admit it was so fun building this project especially since I am a cat lover it's always great to be able to use code to build the things you love :-)
+> Finally, I have to say it was so fun building this project since I am a cat lover, it's always great to be able to use code to build the things you love >:-)
 
 
 ### Built With

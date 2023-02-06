@@ -15,6 +15,7 @@ function Discover() {
         </h2>
         <Link
           href="/most-searched"
+          aria-label="Explore your most searched breeds"
           className="flex items-center text-xs md:text-base uppercase"
         >
           <span>

@@ -40,6 +40,7 @@ function Why(props) {
         </p>
         <Link
           href="/why"
+          aria-label="Explore some reasons on why you should have a cat"
           className="my-4 md:my-8 font-bold flex items-center text-xs uppercase md:text-base "
         >
           Read More{" "}

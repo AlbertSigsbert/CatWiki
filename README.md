@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://cat-wiki-phi.vercel.app/">
       Demo
     </a>
     <span> | </span>
@@ -21,17 +21,6 @@
     </a>
   </h3>
 </div>
-
-<!-- TABLE OF CONTENTS -->
-
-## Table of Contents
-
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 

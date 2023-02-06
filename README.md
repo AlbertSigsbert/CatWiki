@@ -75,7 +75,7 @@ $ git clone https://github.com/your-user-name/your-project-name
 # Install dependencies
 $ npm install
 
-# SignUp at the catsAPI
+# Signup at the catsAPI
 
 # Add your API KEY to your .env file
 
